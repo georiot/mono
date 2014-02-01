@@ -151,10 +151,16 @@ namespace System.Net
 			get { throw GetMustImplement (); }
 			set { throw GetMustImplement (); }
 		}
-		
+	
+		private TokenImpersonationLevel impersonationLevel = TokenImpersonationLevel.None;
+	
 		public TokenImpersonationLevel ImpersonationLevel {
-			get { throw GetMustImplement (); }
-			set { throw GetMustImplement (); }
+			get {
+				return impersonationLevel;
+			}
+			set {
+				impersonationLevel = value;
+			}
 		}
 
 		public virtual string Method { 
